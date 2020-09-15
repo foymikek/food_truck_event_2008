@@ -9,4 +9,11 @@ class Event
     @food_trucks << food_truck_obj
   end
 
+  def food_truck_names
+    event_truck_names = @food_trucks.map do |truck|
+      truck.name
+    end
+    event_truck_names
+  end
+
 end
