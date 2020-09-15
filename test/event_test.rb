@@ -28,7 +28,7 @@ class EventTest < Minitest::Test
     event.add_food_truck(food_truck1)
     event.add_food_truck(food_truck2)
     event.add_food_truck(food_truck3)
-    event.food_trucks
-#=> [#<FoodTruck:0x00007fe1348a1160...>, #<FoodTruck:0x00007fe1349bed40...>, #<FoodTruck:0x00007fe134910650...>]
+    expected = [food_truck1, food_truck2, food_truck3]
+    assert_equal expected, event.food_trucks
   end
 end
