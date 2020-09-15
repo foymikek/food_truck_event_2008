@@ -6,12 +6,14 @@ require "./lib/food_truck"
 class FoodTruckTest < Minitest::Test
   def test_it_has_attributes
     food_truck = FoodTruck.new("Rocky Mountain Pies")
-    
+
     assert_equal "Rocky Mountain Pies", food_truck.name
     expected = {}
     assert_equal expected, food_truck.inventory
-    
-    
-    
+  end
+
+  def test_can_check_food_truck_stock_item
+    food_truck = FoodTruck.new("Rocky Mountain Pies")
+    assert_equal 0, food_truck.check_stock(item1)
   end
 end
