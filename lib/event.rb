@@ -16,4 +16,14 @@ class Event
     event_truck_names
   end
 
+  def food_trucks_that_sell(item_obj)
+    trucks_selling_desired_item = []
+    @food_trucks.each do |truck|
+      truck.inventory.each do |item|
+        trucks_selling_desired_item << truck if item[0].name == item_obj.name
+      end
+    end
+    trucks_selling_desired_item.flatten
+  end
+
 end
