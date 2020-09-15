@@ -26,4 +26,8 @@ class Event
     trucks_selling_desired_item.flatten
   end
 
+  def total_inventory
+    require "pry"; binding.pry
+  end
+
 end
